@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="shapes.js"></script>
+	</head>
+	<body>
+		<div id="q1">
+			<p>1. Observe the following sequence. What should come in the circle marked with a question?</p>
+			<canvas id="q1canvas" height="50" width="750"></canvas>
+			<script>
+				dShape.setContextFromId("q1canvas");
+				var x = dShape.sequenceOfCircles(
+				[0, 1, 2, 4, 6, 9, 12, 16, 20, "?"],
+				25,
+				25,
+				20,
+				"black",
+				{
+					lineWidth: 2,
+					strokeStyle: "#003300",
+					font: "20px Georgia",
+					textAlign: "center",
+					textBaseline: "middle"
+				}
+				);
+			</script>
+		</div>
+		<div id="q2">
+			<p>2. What number should replace the question mark?</p>
+			<canvas id="q2canvas" width="600" height="600"></canvas>
+			<script>
+				var x = 25, y = 25, r = 20;
+				dShape.setContextFromId("q2canvas");
+				dShape.pyramidOfCircles(
+				[
+					[4, 6, "?", 8],
+					[5, 7, 6],
+					[7, 2],
+					[9]
+				],
+				x, y, r, "black",
+				{
+					lineWidth: 2,
+					strokeStyle: "#003300",
+					font: "20px Georgia",
+					textAlign: "center",
+					textBaseline: "middle"
+				}
+				);
+			</script>
+		</div>
+	</body>
+</html>
